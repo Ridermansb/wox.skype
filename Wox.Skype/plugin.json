@@ -1,0 +1,12 @@
+﻿{
+  "ID":"b9e1c0406e5d4e91bede906c68ea7bdd",
+  "ActionKeyword":"skp",
+  "Name":"Wox.Skype",
+  "Description":"Search a skype contact and start a new conversation",
+  "Author":"Riderman de Sousa (@ridermansb)",
+  "Version":"1.0.0",
+  "Language":"csharp",
+  "Website":"http://blog.ridermansb.me/",
+  "IcoPath": "Images\\plugin.png",
+  "ExecuteFileName":"Wox.Skype.dll"
+}
