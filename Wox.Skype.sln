@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wox.Skype", "Wox.Skype\Wox.Skype.csproj", "{04352C85-153B-4A5E-948B-157005EF14EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wox.Skype.Test", "Wox.Skype.Test\Wox.Skype.Test.csproj", "{9D4DBE36-276A-4E52-A527-C25CECC3DD42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{04352C85-153B-4A5E-948B-157005EF14EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04352C85-153B-4A5E-948B-157005EF14EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04352C85-153B-4A5E-948B-157005EF14EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D4DBE36-276A-4E52-A527-C25CECC3DD42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D4DBE36-276A-4E52-A527-C25CECC3DD42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D4DBE36-276A-4E52-A527-C25CECC3DD42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D4DBE36-276A-4E52-A527-C25CECC3DD42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
