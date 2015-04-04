@@ -11,7 +11,9 @@ branches:
     - master
 
 init: 
-  - c:\windows\system32\regsvr32 /s Interop.SKYPE4COMLib.dll
+  - mkdir "Wox.Skype\bin\$(configuration)\""
+  - cp Interop.SKYPE4COMLib.dll "Wox.Skype\bin\$(configuration)\Interop.SKYPE4COMLib.dll"
+#  - c:\windows\system32\regsvr32 /s Interop.SKYPE4COMLib.dll
 
 before_build:
   - nuget restore
