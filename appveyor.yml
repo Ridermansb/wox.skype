@@ -4,8 +4,11 @@ branches:
   only:
     - master
 
+before_build:
+  - nuget restore
+
 test:
   # assemblies to test - optional
   assemblies:
-    - Wox.Skype.Test\bin\$(configuration)\Wox.Skype.Test.dll
+    - **\Wox.Skype.Test\bin\$(configuration)\Wox.Skype.Test.dll
 
