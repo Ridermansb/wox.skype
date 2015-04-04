@@ -5,6 +5,8 @@ build:
 
 cache:
   - packages -> **\packages.config 
+  - C:\ProgramData\chocolatey\bin -> appveyor.yml
+  - C:\ProgramData\chocolatey\lib -> appveyor.yml  
 
 branches:
   only:
@@ -29,4 +31,4 @@ notifications:
     auth_token:
       secure: cNQ4nndjuemYoNBkNMROjh4huxAlgxKTSi4OmbJihVANGcy3PR0gUL9KEeZHYsRM
     channel: activities
-    template: "{{message}}, {{commitId}}, ..."
+    template: "{{APPVEYOR_REPO_COMMIT_MESSAGE }}, {{commitId}}, ..."
