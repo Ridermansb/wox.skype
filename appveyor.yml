@@ -11,7 +11,7 @@ branches:
     - master
 
 init: 
-  - regsvr32 Interop.SKYPE4COMLib.dll /s
+  - regsvr32 Interop.SKYPE4COMLib.dll
 
 before_build:
   - nuget restore
