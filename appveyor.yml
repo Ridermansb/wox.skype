@@ -2,5 +2,12 @@ version: 1.0..0.{build}
 assembly_info:
   patch: true
   file: 'Wox.Spype/Properties/AssemblyInfo.cs'
-  assembly_version: $(appveyor_build_version)
-  assembly_file_version: $(appveyor_build_version)
+  assembly_version: '$(appveyor_build_version)'
+  assembly_file_version: '$(appveyor_build_version)'
+
+platform:
+  - x86
+
+branches:
+  only:
+    - master
