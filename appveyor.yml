@@ -13,7 +13,7 @@ branches:
     - master
 
 before_build:
-  - cinst Skype
+  - choco install skype
 #  - mkdir "Wox.Skype\bin\$(configuration)\"
 #  - regsvr32 /s Interop.SKYPE4COMLib.dll
 #  - copy Interop.SKYPE4COMLib.dll "Wox.Skype\bin\$(configuration)\Interop.SKYPE4COMLib.dll" /Y
