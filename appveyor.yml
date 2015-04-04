@@ -1,5 +1,8 @@
 version: 1.0.0.{build}
 
+build:
+  project: Wox.Skype.sln
+
 cache:
   - packages -> **\packages.config 
 
@@ -8,6 +11,8 @@ branches:
     - master
 
 before_build:
+  - ls
+  - cd Wox.Skype
   - regsvr32 /s Interop.SKYPE4COMLib.dll
   - nuget restore
 
