@@ -1,9 +1,4 @@
-version: 1.0..0.{build}
-assembly_info:
-  patch: true
-  file: 'Wox.Spype/Properties/AssemblyInfo.cs'
-  assembly_version: '$(appveyor_build_version)'
-  assembly_file_version: '$(appveyor_build_version)'
+version: 1.0.0.{build}
 
 platform:
   - x86
@@ -11,3 +6,9 @@ platform:
 branches:
   only:
     - master
+
+test:
+  # assemblies to test - optional
+  assemblies:
+    - Wox.Skype.Test\bin\$(configuration)\Wox.Skype.Test.dll
+
