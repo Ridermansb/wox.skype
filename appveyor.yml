@@ -16,4 +16,3 @@ test:
 
 artifacts:
   - path:'**\Wox.Skype\Wox.Skype\bin\$(configuration)\Wox.Skype.wox'
-    name: 'Wox.Skype.wox'
