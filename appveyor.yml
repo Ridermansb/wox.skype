@@ -11,9 +11,7 @@ branches:
     - master
 
 init: 
-  - ls
-  - cd Wox.Skype
-  - regsvr32 /s Interop.SKYPE4COMLib.dll
+  - regsvr32 Interop.SKYPE4COMLib.dll /s
 
 before_build:
   - nuget restore
