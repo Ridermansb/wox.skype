@@ -3,14 +3,12 @@ version: 1.0.0.{build}
 cache:
   - packages -> **\packages.config 
 
-before_build:
-  - cmd: regsvr32 "%APPVEYOR_BUILD_FOLDER%\Interop.SKYPE4COMLib.dll"
-
 branches:
   only:
     - master
 
 before_build:
+  - regsvr32 "%APPVEYOR_BUILD_FOLDER%\Interop.SKYPE4COMLib.dll"
   - nuget restore
 
 test:
