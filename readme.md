@@ -1,7 +1,6 @@
 
 # Wox.Skype
 
-
 ![Build Status](https://ci.appveyor.com/api/projects/status/github/Ridermansb/wox.skype)
 ![Pay me a coffee](http://img.shields.io/gratipay/ridermansb.svg)
 

@@ -11,9 +11,10 @@ branches:
     - master
 
 before_build:
-  - mkdir "Wox.Skype\bin\$(configuration)\"
-  - regsvr32 /s Interop.SKYPE4COMLib.dll
-  - copy Interop.SKYPE4COMLib.dll "Wox.Skype\bin\$(configuration)\Interop.SKYPE4COMLib.dll" /Y
+   - cinst Skype
+#  - mkdir "Wox.Skype\bin\$(configuration)\"
+#  - regsvr32 /s Interop.SKYPE4COMLib.dll
+#  - copy Interop.SKYPE4COMLib.dll "Wox.Skype\bin\$(configuration)\Interop.SKYPE4COMLib.dll" /Y
   - nuget restore
 
 test:
