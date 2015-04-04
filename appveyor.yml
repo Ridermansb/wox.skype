@@ -12,7 +12,7 @@ branches:
 
 init: 
   - mkdir "Wox.Skype\bin\$(configuration)\""
-  - copy Interop.SKYPE4COMLib.dll "Wox.Skype\bin\$(configuration)\Interop.SKYPE4COMLib.dll"
+  - copy Interop.SKYPE4COMLib.dll "Wox.Skype\bin\$(configuration)\Interop.SKYPE4COMLib.dll" /Y
 #  - c:\windows\system32\regsvr32 /s Interop.SKYPE4COMLib.dll
 
 before_build:
@@ -24,3 +24,10 @@ test:
 
 artifacts:
   - path: '**\Wox.Skype\Wox.Skype\bin\$(configuration)\Wox.Skype.wox'
+
+notifications:
+  - provider: Slack
+    auth_token:
+      secure: cNQ4nndjuemYoNBkNMROjh4huxAlgxKTSi4OmbJihVANGcy3PR0gUL9KEeZHYsRM
+    channel: development
+    template: "{{message}}, {{commitId}}, ..."
