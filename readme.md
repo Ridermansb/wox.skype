@@ -2,7 +2,8 @@
 # Wox.Skype
 
 
-![Build Status on Github](https://ci.appveyor.com/api/projects/status/github/Ridermansb/wox.skype)
+![Build Status](https://ci.appveyor.com/api/projects/status/github/Ridermansb/wox.skype)
+![Pay me a coffee](//img.shields.io/gratipay/ridermansb.svg)
 
 Performs search of Skype contacts and start a conversation.
 
