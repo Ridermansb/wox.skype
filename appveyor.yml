@@ -8,7 +8,7 @@ branches:
     - master
 
 before_build:
-  - regsvr32 /s "$(APPVEYOR_BUILD_FOLDER)\Interop.SKYPE4COMLib.dll"
+  - regsvr32 /s Interop.SKYPE4COMLib.dll
   - nuget restore
 
 test:
@@ -16,6 +16,4 @@ test:
     - '**\Wox.Skype.Test\bin\$(configuration)\Wox.Skype.Test.dll'
 
 artifacts:
- 
-  # pushing a single file
   - path: '**\Wox.Skype\Wox.Skype\bin\$(configuration)\Wox.Skype.wox'
