@@ -13,7 +13,7 @@ branches:
     - master
 
 before_build:
-   - cinst Skype
+  - cinst Skype
 #  - mkdir "Wox.Skype\bin\$(configuration)\"
 #  - regsvr32 /s Interop.SKYPE4COMLib.dll
 #  - copy Interop.SKYPE4COMLib.dll "Wox.Skype\bin\$(configuration)\Interop.SKYPE4COMLib.dll" /Y
@@ -31,4 +31,3 @@ notifications:
     auth_token:
       secure: cNQ4nndjuemYoNBkNMROjh4huxAlgxKTSi4OmbJihVANGcy3PR0gUL9KEeZHYsRM
     channel: activities
-    template: "{{APPVEYOR_REPO_COMMIT_MESSAGE }}, {{commitId}}, ..."
