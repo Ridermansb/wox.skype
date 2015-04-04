@@ -1,8 +1,5 @@
 version: 1.0.0.{build}
 
-platform:
-  - x86
-
 branches:
   only:
     - master
