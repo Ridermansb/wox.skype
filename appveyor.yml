@@ -13,7 +13,7 @@ branches:
     - master
 
 before_build:
-  - choco install skype --force
+  - choco install skype -force -yd
   - nuget restore
 
 test:
