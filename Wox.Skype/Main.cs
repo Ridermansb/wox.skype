@@ -11,7 +11,6 @@ namespace Wox.Skype
 		public void Init(PluginInitContext context)
 		{
 			_skype = new SkypeClass();
-			_skype.Attach(6, true);
 		}
 
 		public List<Result> Query(Query query)
