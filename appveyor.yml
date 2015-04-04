@@ -11,10 +11,9 @@ before_build:
   - nuget restore
 
 test:
-  # assemblies to test - optional
   assemblies:
     - '**\Wox.Skype.Test\bin\$(configuration)\Wox.Skype.Test.dll'
 
 artifacts:
   - path:'**\Wox.Skype\Wox.Skype\bin\$(configuration)\Wox.Skype.wox'
-    name: Wox.Skype.wox
+    name: 'Wox.Skype.wox'
