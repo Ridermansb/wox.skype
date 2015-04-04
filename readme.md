@@ -2,6 +2,7 @@
 # Wox.Skype
 
 ![Pay me a coffee](http://img.shields.io/gratipay/ridermansb.svg)
+[![Coverage Status](https://coveralls.io/repos/Ridermansb/wox.skype/badge.svg)](https://coveralls.io/r/Ridermansb/wox.skype)
 ![Build Status](https://ci.appveyor.com/api/projects/status/github/Ridermansb/wox.skype)
 
 Performs search of Skype contacts and start a conversation.
