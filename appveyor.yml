@@ -1,5 +1,8 @@
 version: 1.0.0.{build}
 
+cache:
+  - packages -> **\packages.config 
+
 branches:
   only:
     - master
@@ -12,3 +15,6 @@ test:
   assemblies:
     - '**\Wox.Skype.Test\bin\$(configuration)\Wox.Skype.Test.dll'
 
+artifacts:
+  - path:'**\Wox.Skype\Wox.Skype\bin\$(configuration)\Wox.Skype.wox'
+    name: Wox.Skype.wox

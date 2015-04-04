@@ -1,6 +1,9 @@
 
 # Wox.Skype
 
+
+![Build Status](https://ci.appveyor.com/project/Ridermansb/wox-skype/branch/master)
+
 Performs search of Skype contacts and start a conversation.
 
 When no query is performed (just typing `sky`), option to open skype appears.
