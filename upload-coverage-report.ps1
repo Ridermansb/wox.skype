@@ -1,14 +1,16 @@
-Write-Host -ForegroundColor DarkBlue "Upload coverage report ..."
+Write-Host -ForegroundColor Cyan "Generate coverage report ..."
 
-Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_ACCESS_TOKEN):x-oauth-basic@github.com/Ridermansb/wox.skype.git"
+git clone -b -n --depth=1 gh-pages "https://github.com/Ridermansb/wox.skype.git" gh-pages
 
 ls
-
-git clone -b gh-pages https://github.com/Ridermansb/wox.skype.git gh-pages
 
 cd gh-pages
 
 . ..\$env:reportPath  -reports:..\$env:coverResultFile -targetdir:coverage
+
+
+
+Write-Host -ForegroundColor Cyan "Upload coverage report ..."
 
 git add .
 

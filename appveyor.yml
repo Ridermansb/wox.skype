@@ -68,5 +68,6 @@ on_success:
   - git config --global credential.helper store
   - git config --global user.email "appveyor@bindsolution.com"
   - git config --global user.name "AppVeyor"
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_ACCESS_TOKEN):x-oauth-basic@github.com/Ridermansb/wox.skype.git"
   - ps: >-
-      . .\upload-coverage-report.ps1
+        . .\upload-coverage-report.ps1
