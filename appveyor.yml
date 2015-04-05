@@ -39,7 +39,7 @@ test_script:
 
 after_test: 
   - cmd: >- 
-          "%coverPath%" --opencover %coverResultFile% 
+          "%coverPath%" --opencover %coverResultFile% --full-sources
 
 artifacts:
   - path: '**\Wox.Skype.wox'
