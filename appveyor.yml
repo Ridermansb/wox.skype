@@ -68,6 +68,11 @@ on_success:
           "%reportPath%" -reports:%coverResultFile% -targetdir:coverage
 
           git config --global credential.helper store
+
+          git config --global user.email "appveyor@bindsolution.com"
+
+          git config --global user.name "AppVeyor"
+
   - 7z a coverage.zip coverage/**
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_ACCESS_TOKEN):x-oauth-basic@github.com/Ridermansb/wox.skype.git"
   - cmd: >-
