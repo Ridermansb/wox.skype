@@ -7,7 +7,7 @@ namespace Wox.Skype
 {
 	public interface ISkype
 	{
-		void Open();
+		bool Open();
 
 		IList<SkypeUser> getFriendsBy(string query);
 

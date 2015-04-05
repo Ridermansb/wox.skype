@@ -37,13 +37,7 @@ namespace Wox.Skype
 				{
 					IcoPath = "Images\\app.png",
 					Title = "Open skype",
-					Action = e =>
-					{
-						_skype.Open();
-						return true;
-
-
-					}
+					Action = e => _skype.Open()
 				});
 				return results;
 			}

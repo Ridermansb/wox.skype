@@ -14,9 +14,10 @@ namespace Wox.Skype
 			_skype = new SkypeClass();
 		}
 
-		public void Open()
+		public bool Open()
 		{
-			_skype.Client.Start();
+			_skype.Client.Start(Nosplash: true);
+			return true;
 		}
 
 

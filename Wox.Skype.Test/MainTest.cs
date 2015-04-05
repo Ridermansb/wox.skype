@@ -43,12 +43,20 @@ namespace Wox.Skype.Test
 		[Test]
 		public void OnQueryWithForANonExistentContactShouldReturnContact()
 		{
-			var contact = new SkypeUser { UserName = "<a username>", FullName = "<a full name>", StatusText = "<a status text>" };
 			_skype.Setup(p => p.getFriendsBy(It.IsAny<string>())).Returns(new List<SkypeUser>() { });
 			var results = _main.Query(new Query("skp contact"));
 
 
 			results.Should().BeEmpty();
+		}
+
+		[Test]
+		public void WhenQueryWithNoParamtersShouldDisplayOpenSkype()
+		{
+			_skype.Setup(p => p.getFriendsBy(It.IsAny<string>())).Returns(new List<SkypeUser>() { });
+			var results = _main.Query(new Query("skp"));
+
+			results.Should().ContainSingle();
 		}
 	}
 }
