@@ -10,7 +10,7 @@
 ### Features
 
  * Search by Aliases, DisplayName, FullName, PhoneHome, PhoneMobile or PhoneOffice and start conversation.
- * Just typing `sky` on Wox search box to open skype appears.
+ * Just typing `sky` on Wox search box to open skype.
 
 
 ### Install
