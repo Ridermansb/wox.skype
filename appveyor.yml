@@ -35,8 +35,8 @@ test:
     - '**\*Test.dll'
 
 after_test:
-  - %openPath% -target:$nunitPath -targetargs:"%testDlls% /nologo /noshadow" -output:"%coverResultFile%" -register:user -filter:"+[Wox.Skype*]*" -filter:"-[Wox.Skype*Test]*" -targetdir:"%testDir%"
-  - %coverPath% --opencover -i %coverResultFile% --repoToken %COVERALLS_REPO_TOKEN% --commitId %APPVEYOR_REPO_COMMIT% --commitBranch %APPVEYOR_REPO_BRANCH% --commitAuthor %APPVEYOR_REPO_COMMIT_AUTHOR% --commitEmail %APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL% --commitMessage %APPVEYOR_REPO_COMMIT_MESSAGE% --jobId %APPVEYOR_JOB_ID%
+  - "%openPath%" -target:%nunitPath% -targetargs:"%testDlls% /nologo /noshadow" -output:"%coverResultFile%" -register:user -filter:"+[Wox.Skype*]*" -filter:"-[Wox.Skype*Test]*" -targetdir:"%testDir%"
+  - "%coverPath%" --opencover -i %coverResultFile% --repoToken %COVERALLS_REPO_TOKEN% --commitId %APPVEYOR_REPO_COMMIT% --commitBranch %APPVEYOR_REPO_BRANCH% --commitAuthor %APPVEYOR_REPO_COMMIT_AUTHOR% --commitEmail %APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL% --commitMessage %APPVEYOR_REPO_COMMIT_MESSAGE% --jobId %APPVEYOR_JOB_ID%
 
 # & $reportPath  -reports:_CodeCoverageResult.xml -targetdir:coverage
 
