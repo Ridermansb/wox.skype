@@ -27,11 +27,6 @@ environment:
 cache:
   - packages -> **\packages.config 
 
-branches:
-  only:
-    - master
-    - develop
-
 before_build:
   - regsvr32 /s Skype4COM.dll
   - nuget restore
