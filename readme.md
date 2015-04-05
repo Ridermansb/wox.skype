@@ -7,10 +7,18 @@
 ![Build Status](https://ci.appveyor.com/api/projects/status/github/Ridermansb/wox.skype)
 [![Join the chat at https://gitter.im/Ridermansb/wox.skype](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Ridermansb/wox.skype?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+### Features
 
-Performs search of Skype contacts and start a conversation.
+ * Search by Aliases, DisplayName, FullName, PhoneHome, PhoneMobile or PhoneOffice and start conversation.
+ * Just typing `sky` on Wox search box to open skype appears.
 
-When no query is performed (just typing `sky`), option to open skype appears.
+
+### Install
+You can choose any of the two options to install:
+
+ * Using a default [Wox install](https://www.getwox.com/plugin/27) way `wpm install Wox.Skype`
+ * Install manually downloading the package .wox on [wox page](https://www.getwox.com/plugin/27) or in [Github Releases](https://github.com/Ridermansb/wox.skype/releases) and then drag the plugin package to Wox search box.
+
 
 **Only work on x86 platform, see issue [#1](https://github.com/Ridermansb/wox.skype/issues/1)**, so install x86 version of Wox  
 *if you use a [chocolatey](https://chocolatey.org/), `choco install wox --x86 -y -f --acceptlicense`*

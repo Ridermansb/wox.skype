@@ -40,7 +40,7 @@ after_test:
 
 artifacts:
   - path: '**\Wox.Skype.wox'
-    name: 'Wox.Skype.wox'
+    name: 'Wox.Skype.wox' 
 
 deploy:
   release: Wox.Skype-v$(appveyor_build_version)
