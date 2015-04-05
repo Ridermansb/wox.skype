@@ -17,7 +17,7 @@ environment:
   COVERALLS_REPO_TOKEN:
     secure: nhZlROX6ElGcNP+EWzsmZt6ihx3hgLZmt7aRGoR5YVCbgfkmpbsdLd5xm2vDybsa
   GITHUB_ACCESS_TOKEN:
-    secure: nhZlROX6ElGcNP+EWzsmZt6ihx3hgLZmt7aRGoR5YVCbgfkmpbsdLd5xm2vDybsa
+    secure: pmwS6u8RTwhUxbUQQp/BHKxoy3c6UwZAKcTqgGSmOrw95itjLkVgS/mu5SDM0zrE
 
 cache:
   - packages -> **\packages.config 
