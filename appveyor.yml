@@ -32,15 +32,12 @@ before_build:
   - choco install skype -force -y
   - nuget restore
 
-test:
-  assemblies:
-    - '**\*Test.dll'
-
-after_test:
+test_script:
   - cmd: >-
           "%openPath%" -target:%nunitPath% -targetargs:"%testDlls% /nologo /noshadow" -output:"%coverResultFile%" -register:user -targetdir:"%testDir%" -filter:"+[Wox.Skype*]*" -filter:"-[Wox.Skype*Test]*"
 
-          "%coverPath%" --opencover -i %coverResultFile% --repoToken %COVERALLS_REPO_TOKEN% --commitId %APPVEYOR_REPO_COMMIT% --commitBranch %APPVEYOR_REPO_BRANCH% --commitAuthor %APPVEYOR_REPO_COMMIT_AUTHOR% --commitEmail %APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL% --commitMessage %APPVEYOR_REPO_COMMIT_MESSAGE% --jobId %APPVEYOR_JOB_ID%
+after_test: 
+  - cmd: "%coverPath%" --opencover -i %coverResultFile% --repoToken %COVERALLS_REPO_TOKEN% --commitId %APPVEYOR_REPO_COMMIT% --commitBranch %APPVEYOR_REPO_BRANCH% --commitAuthor %APPVEYOR_REPO_COMMIT_AUTHOR% --commitEmail %APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL% --commitMessage %APPVEYOR_REPO_COMMIT_MESSAGE% --jobId %APPVEYOR_JOB_ID%
 
 artifacts:
   - path: '**\Wox.Skype.wox'
