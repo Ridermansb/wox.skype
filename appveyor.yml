@@ -3,6 +3,8 @@ version: 1.0.0.{build}
 build:
   project: Wox.Skype.sln
 
+skip_tags: true
+
 init:
   - git config --global core.autocrlf true
 
