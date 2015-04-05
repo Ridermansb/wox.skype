@@ -3,7 +3,7 @@ Write-Host -ForegroundColor Cyan "Generate coverage report ..."
 # For: 2>&1 | % { $_.ToString() } see ..
 # http://help.appveyor.com/discussions/problems/555-accessing-another-repository-during-a-build
 
-git clone -b -n --depth=1 gh-pages "https://github.com/Ridermansb/wox.skype.git" gh-pages 2>&1 | % { $_.ToString() }
+git clone -b gh-pages "https://github.com/Ridermansb/wox.skype.git" gh-pages 2>&1 | % { $_.ToString() }
 
 ls
 
