@@ -3,10 +3,10 @@
 
 ![Pay me a coffee](http://img.shields.io/gratipay/ridermansb.svg)
 [![Coverage Status](https://coveralls.io/repos/Ridermansb/wox.skype/badge.svg)](https://coveralls.io/r/Ridermansb/wox.skype)
+[![Code Coverage](https://img.shields.io/badge/coverage-code-brightgreen.svg)](http://ridermansb.github.io/wox.skype/coverage/index.htm)
 ![Build Status](https://ci.appveyor.com/api/projects/status/github/Ridermansb/wox.skype)
-[![Join the chat at https://gitter.im/Ridermansb/wox.skype](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Ridermansb/wox.skype?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
+[![Join the chat at https://gitter.im/Ridermansb/wox.skype](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Ridermansb/wox.skype?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-You can navigate into code coverage navigator [here](http://ridermansb.github.io/wox.skype/coverage/index.htm)
 
 Performs search of Skype contacts and start a conversation.
 
