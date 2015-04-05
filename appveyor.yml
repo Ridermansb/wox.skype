@@ -42,13 +42,14 @@ after_test:
 
 artifacts:
   - path: '**\Wox.Skype.wox'
+    name: 'Wox.Skype.wox'
 
 deploy:
   release: Wox.Skype-v$(appveyor_build_version)
   provider: GitHub
   auth_token:
     secure: $(GITHUB_RELEASE_TOKEN)
-  artifact: /.*\.Wox.Skype.wox
+  artifact: Wox.Skype.wox
   draft: false
   prerelease: false
   on:
