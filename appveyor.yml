@@ -64,8 +64,6 @@ notifications:
     channel: activities
 
 on_success:
-  - cmd: >- 
-          "%reportPath%" -reports:%coverResultFile% -targetdir:coverage
   - git config --global credential.helper store
   - git config --global user.email "appveyor@bindsolution.com"
   - git config --global user.name "AppVeyor"

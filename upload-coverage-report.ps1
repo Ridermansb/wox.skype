@@ -6,7 +6,7 @@ git clone -b gh-pages https://github.com/Ridermansb/wox.skype.git gh-pages
 
 cd gh-pages
 
-Move-Item coverage\* gh-pages\coverage -Force
+. ..\$reportPath  -reports:..\$env:coverResultFile -targetdir:coverage
 
 git add .
 
