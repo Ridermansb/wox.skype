@@ -6,6 +6,9 @@ build:
 init:
   - git config --global core.autocrlf true
 
+skip_commits:
+  message: /readme.*/
+
 environment:
   nunitPath: 'packages\NUnit.Runners.2.6.4\tools\nunit-console-x86.exe'
   reportPath: 'packages\ReportGenerator.2.1.4.0\ReportGenerator.exe'
