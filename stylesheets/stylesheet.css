@@ -317,12 +317,12 @@ Full-Width Styles
 
 #downloads {
   position: absolute;
-  width: 210px;
+  width: 154px;
   z-index: 10;
-  bottom: -40px;
+  bottom: 13px;
   right: 0;
   height: 70px;
-  background: url('../images/icon_download.png') no-repeat 0% 90%;
+  /*background: url('../images/icon_download.png') no-repeat 0% 90%;*/
 }
 
 .zip_download_link {
@@ -344,6 +344,12 @@ Full-Width Styles
   overflow: hidden;
   background: url(../images/sprite_download.png) no-repeat bottom right;
   margin-left: 10px;
+}
+
+#downloads img {
+  border: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
 .zip_download_link:hover {
