@@ -16,6 +16,8 @@ environment:
   coverResultFile: '_CodeCoverageResult.xml'
   COVERALLS_REPO_TOKEN:
     secure: nhZlROX6ElGcNP+EWzsmZt6ihx3hgLZmt7aRGoR5YVCbgfkmpbsdLd5xm2vDybsa
+  GITHUB_ACCESS_TOKEN:
+    secure: nhZlROX6ElGcNP+EWzsmZt6ihx3hgLZmt7aRGoR5YVCbgfkmpbsdLd5xm2vDybsa
 
 cache:
   - packages -> **\packages.config 
@@ -64,4 +66,26 @@ on_success:
   - cmd: >- 
           "%reportPath%" -reports:%coverResultFile% -targetdir:coverage
   - 7z a coverage.zip coverage/**
-  - appveyor PushArtifact coverage.zip
+  - cmd: >-
+          git config --global credential.helper store
+
+          mkdir gh-pages
+
+          cd gh-pages
+
+          git clone -b gh-pages ..\.git .
+
+          cd coverage
+
+          7z e ..\..\coverage.zip  -y
+
+          cd ..
+          
+          git add .
+
+          git commit -am "Update coverage code repost"
+
+          git remote set-url origin git@github.com:Ridermansb/wox.skype.git
+
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_ACCESS_TOKEN):x-oauth-basic@github.com`n"
+  - git push origin gh-pages
