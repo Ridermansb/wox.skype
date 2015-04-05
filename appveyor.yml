@@ -75,7 +75,7 @@ on_success:
 
           cd gh-pages
 
-          git clone -b gh-pages git@github.com:Ridermansb/wox.skype.git .
+          git clone -b gh-pages https://github.com/Ridermansb/wox.skype.git .
 
           cd coverage
 
