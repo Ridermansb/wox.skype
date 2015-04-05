@@ -5,9 +5,8 @@
 [![Coverage Status](https://coveralls.io/repos/Ridermansb/wox.skype/badge.svg)](https://coveralls.io/r/Ridermansb/wox.skype)
 ![Build Status](https://ci.appveyor.com/api/projects/status/github/Ridermansb/wox.skype)
 [![Join the chat at https://gitter.im/Ridermansb/wox.skype](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Ridermansb/wox.skype?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
-<script data-gratipay-username="ridermansb"
-        data-gratipay-widget="button"
-        src="https://grtp.co/v1.js"></script>
+
+[Give-me a coffee :)](https://gratipay.com/ridermansb)
 
 Performs search of Skype contacts and start a conversation.
 
