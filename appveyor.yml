@@ -16,6 +16,8 @@ environment:
   coverResultFile: '_CodeCoverageResult.xml'
   COVERALLS_REPO_TOKEN:
     secure: nhZlROX6ElGcNP+EWzsmZt6ihx3hgLZmt7aRGoR5YVCbgfkmpbsdLd5xm2vDybsa
+  GITHUB_RELEASE_TOKEN:
+    secure: oD3Rpucvy3qCC53CugLcvhAdkzK8HaipN2e70QTCss1ob+uCI6YEtRXG0XvcuNPQ
 
 cache:
   - packages -> **\packages.config 
@@ -40,10 +42,20 @@ after_test:
 
           "%coverPath%" --opencover -i %coverResultFile% --repoToken %COVERALLS_REPO_TOKEN% --commitId %APPVEYOR_REPO_COMMIT% --commitBranch %APPVEYOR_REPO_BRANCH% --commitAuthor %APPVEYOR_REPO_COMMIT_AUTHOR% --commitEmail %APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL% --commitMessage %APPVEYOR_REPO_COMMIT_MESSAGE% --jobId %APPVEYOR_JOB_ID%
 
-# & $reportPath  -reports:_CodeCoverageResult.xml -targetdir:coverage
-
 artifacts:
   - path: '**\Wox.Skype.wox'
+
+deploy:
+  release: Wox.Skype-v$(appveyor_build_version)
+  provider: GitHub
+  auth_token:
+    secure: $(GITHUB_RELEASE_TOKEN)
+  artifact: /.*\.Wox.Skype.wox
+  draft: false
+  prerelease: false
+  on:
+    branch: master
+    appveyor_repo_tag: false        # TODO: Make true to deploy on tag push only
 
 notifications:
   - provider: Slack
