@@ -5,13 +5,9 @@ Write-Host -ForegroundColor Cyan "Generate coverage report ..."
 
 git clone -b gh-pages "https://github.com/Ridermansb/wox.skype.git" gh-pages 2>&1 | % { $_.ToString() }
 
-ls
-
 cd gh-pages
 
 . ..\$env:reportPath  -reports:..\$env:coverResultFile -targetdir:coverage
-
-
 
 Write-Host -ForegroundColor Cyan "Upload coverage report ..."
 
