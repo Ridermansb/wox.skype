@@ -9,10 +9,10 @@ init:
 environment:
   nunitPath: 'packages\NUnit.Runners.2.6.4\tools\nunit-console-x86.exe'
   reportPath: 'packages\ReportGenerator.2.1.4.0\ReportGenerator.exe'
-  openPath: 'packages\OpenCover.4.5.3723\OpenCover.Console.exe'
   coverPath: 'packages\coveralls.io.1.3.4\tools\coveralls.net.exe'
   testDir: 'Wox.Skype.Test\bin\Debug'
   testDlls: 'Wox.Skype.Test.dll'
+  coverResultFile: '_CodeCoverageResult.xml'
   COVERALLS_REPO_TOKEN:
     secure: nhZlROX6ElGcNP+EWzsmZt6ihx3hgLZmt7aRGoR5YVCbgfkmpbsdLd5xm2vDybsa
 
@@ -34,8 +34,8 @@ test:
     - '**\*Test.dll'
 
 after_test:
-  - ps: & $openPath -target:$nunitPath -targetargs:"$testDlls /nologo /noshadow" -output:"_CodeCoverageResult.xml" -register:user -filter:"+[Wox.Skype*]*" -filter:"-[Wox.Skype*Test]*" -targetdir:"$testDir"
-  - ps: & $coverPath --opencover -i _CodeCoverageResult.xml --repoToken $env:COVERALLS_REPO_TOKEN --commitId $env:APPVEYOR_REPO_COMMIT --commitBranch $env:APPVEYOR_REPO_BRANCH --commitAuthor $env:APPVEYOR_REPO_COMMIT_AUTHOR --commitEmail $env:APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL --commitMessage $env:APPVEYOR_REPO_COMMIT_MESSAGE --jobId $env:APPVEYOR_JOB_ID
+  - %openPath% -target:$nunitPath -targetargs:"%testDlls% /nologo /noshadow" -output:"%coverResultFile%" -register:user -filter:"+[Wox.Skype*]*" -filter:"-[Wox.Skype*Test]*" -targetdir:"%testDir%"
+  - %coverPath% --opencover -i %coverResultFile% --repoToken %COVERALLS_REPO_TOKEN% --commitId %APPVEYOR_REPO_COMMIT% --commitBranch %APPVEYOR_REPO_BRANCH% --commitAuthor %APPVEYOR_REPO_COMMIT_AUTHOR% --commitEmail %APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL% --commitMessage %APPVEYOR_REPO_COMMIT_MESSAGE% --jobId %APPVEYOR_JOB_ID%
 
 # & $reportPath  -reports:_CodeCoverageResult.xml -targetdir:coverage
 
