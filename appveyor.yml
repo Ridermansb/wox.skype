@@ -49,7 +49,7 @@ deploy:
   release: Wox.Skype-v$(appveyor_build_version)
   provider: GitHub
   auth_token:
-    secure: pmwS6u8RTwhUxbUQQp/BHKxoy3c6UwZAKcTqgGSmOrw95itjLkVgS/mu5SDM0zrE
+    secure: $(GITHUB_ACCESS_TOKEN)
   artifact: Wox.Skype.wox
   draft: false
   prerelease: false
