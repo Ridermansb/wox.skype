@@ -16,8 +16,6 @@ environment:
   coverResultFile: '_CodeCoverageResult.xml'
   COVERALLS_REPO_TOKEN:
     secure: nhZlROX6ElGcNP+EWzsmZt6ihx3hgLZmt7aRGoR5YVCbgfkmpbsdLd5xm2vDybsa
-  GITHUB_RELEASE_TOKEN:
-    secure: oD3Rpucvy3qCC53CugLcvhAdkzK8HaipN2e70QTCss1ob+uCI6YEtRXG0XvcuNPQ
 
 cache:
   - packages -> **\packages.config 
@@ -48,7 +46,7 @@ deploy:
   release: Wox.Skype-v$(appveyor_build_version)
   provider: GitHub
   auth_token:
-    secure: $(GITHUB_RELEASE_TOKEN)
+    secure: pmwS6u8RTwhUxbUQQp/BHKxoy3c6UwZAKcTqgGSmOrw95itjLkVgS/mu5SDM0zrE
   artifact: Wox.Skype.wox
   draft: false
   prerelease: false
