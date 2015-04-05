@@ -13,7 +13,6 @@ When no query is performed (just typing `sky`), option to open skype appears.
 **Only work on x86 platform, see issue [#1](https://github.com/Ridermansb/wox.skype/issues/1)**, so install x86 version of Wox  
 *if you use a [chocolatey](https://chocolatey.org/), `choco install wox --x86 -y -f --acceptlicense`*
 
-
 ![](http://i.imgur.com/1NUoAdz.gif)
 
 ## Donating

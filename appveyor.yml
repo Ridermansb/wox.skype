@@ -37,7 +37,7 @@ test_script:
           "%openPath%" -target:%nunitPath% -targetargs:"%testDlls% /nologo /noshadow" -output:"%coverResultFile%" -register:user -targetdir:"%testDir%" -filter:"+[Wox.Skype*]*" -filter:"-[Wox.Skype*Test]*"
 
 after_test: 
-  - "%coverPath%" --opencover %coverResultFile% 
+  - cmd: "%coverPath%" --opencover %coverResultFile% 
 
 artifacts:
   - path: '**\Wox.Skype.wox'
