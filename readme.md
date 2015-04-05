@@ -6,6 +6,8 @@
 ![Build Status](https://ci.appveyor.com/api/projects/status/github/Ridermansb/wox.skype)
 [![Join the chat at https://gitter.im/Ridermansb/wox.skype](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Ridermansb/wox.skype?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
 
+You can navigate into code coverage navigator [here](http://ridermansb.github.io/wox.skype)
+
 Performs search of Skype contacts and start a conversation.
 
 When no query is performed (just typing `sky`), option to open skype appears.
@@ -14,6 +16,7 @@ When no query is performed (just typing `sky`), option to open skype appears.
 *if you use a [chocolatey](https://chocolatey.org/), `choco install wox --x86 -y -f --acceptlicense`*
 
 ![](http://i.imgur.com/1NUoAdz.gif)
+ 
 
 ## Donating
 
