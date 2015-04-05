@@ -6,6 +6,8 @@ build:
 init:
   - git config --global core.autocrlf true
 
+skip_tags: true
+
 skip_commits:
   message: /readme.*/
 
@@ -28,6 +30,7 @@ cache:
 branches:
   only:
     - master
+    - develop
 
 before_build:
   - regsvr32 /s Skype4COM.dll
@@ -52,7 +55,7 @@ deploy:
     secure: pmwS6u8RTwhUxbUQQp/BHKxoy3c6UwZAKcTqgGSmOrw95itjLkVgS/mu5SDM0zrE
   artifact: Wox.Skype.wox
   draft: false
-  prerelease: false
+  prerelease: true
   on:
     branch: master
 
