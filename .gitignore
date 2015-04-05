@@ -236,3 +236,4 @@ bower_components
 .bower-tmp
 
 TODO.md
+_CodeCoverageResult.xml
