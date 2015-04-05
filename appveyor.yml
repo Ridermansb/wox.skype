@@ -52,10 +52,16 @@ deploy:
   prerelease: false
   on:
     branch: master
-    appveyor_repo_tag: true
+    appveyor_repo_tag: false
 
 notifications:
   - provider: Slack
     auth_token:
       secure: cNQ4nndjuemYoNBkNMROjh4huxAlgxKTSi4OmbJihVANGcy3PR0gUL9KEeZHYsRM
     channel: activities
+
+on_success:
+  - cmd: >- 
+          "%reportPath%" -reports:%coverResultFile% -targetdir:coverage
+  - 7z a coverage.zip coverage/**
+  - appveyor PushArtifact coverage.zip
