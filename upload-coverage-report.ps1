@@ -1,15 +1,22 @@
-Write-Host -ForegroundColor DarkBlue "Upload coverage report ..."
+Write-Host -ForegroundColor Cyan "Generate coverage report ..."
 
-Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_ACCESS_TOKEN):x-oauth-basic@github.com/Ridermansb/wox.skype.git"
+# For: 2>&1 | % { $_.ToString() } see ..
+# http://help.appveyor.com/discussions/problems/555-accessing-another-repository-during-a-build
 
-git clone -b gh-pages https://github.com/Ridermansb/wox.skype.git gh-pages
+git clone -b gh-pages "https://github.com/Ridermansb/wox.skype.git" gh-pages 2>&1 | % { $_.ToString() }
+
+ls
 
 cd gh-pages
 
-Move-Item coverage\* gh-pages\coverage -Force
+. ..\$env:reportPath  -reports:..\$env:coverResultFile -targetdir:coverage
 
-git add .
 
-git commit -am "Update coverage code report"
 
-git push origin gh-pages
+Write-Host -ForegroundColor Cyan "Upload coverage report ..."
+
+git add . 2>&1 | % { $_.ToString() }
+
+git commit -am "Update coverage code report" 2>&1 | % { $_.ToString() }
+
+git push origin gh-pages 2>&1 | % { $_.ToString() }
