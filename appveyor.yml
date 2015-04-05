@@ -3,6 +3,8 @@ version: 1.0.0.{build}
 build:
   project: Wox.Skype.sln
 
+skip_tags: true
+
 init:
   - git config --global core.autocrlf true
 
@@ -49,13 +51,12 @@ deploy:
   release: Wox.Skype-v$(appveyor_build_version)
   provider: GitHub
   auth_token:
-    secure: $(GITHUB_ACCESS_TOKEN)
+    secure: pmwS6u8RTwhUxbUQQp/BHKxoy3c6UwZAKcTqgGSmOrw95itjLkVgS/mu5SDM0zrE
   artifact: Wox.Skype.wox
   draft: false
   prerelease: false
   on:
     branch: master
-    appveyor_repo_tag: true
 
 notifications:
   - provider: Slack
@@ -64,10 +65,9 @@ notifications:
     channel: activities
 
 on_success:
-  - cmd: >- 
-          "%reportPath%" -reports:%coverResultFile% -targetdir:coverage
   - git config --global credential.helper store
   - git config --global user.email "appveyor@bindsolution.com"
   - git config --global user.name "AppVeyor"
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_ACCESS_TOKEN):x-oauth-basic@github.com/Ridermansb/wox.skype.git"
   - ps: >-
-      . .\upload-coverage-report.ps1
+        . .\upload-coverage-report.ps1
