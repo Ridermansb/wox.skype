@@ -63,10 +63,11 @@ notifications:
 on_success:
   - cmd: >- 
           "%reportPath%" -reports:%coverResultFile% -targetdir:coverage
-  - 7z a coverage.zip coverage/**
-  - cmd: >-
-          git config --global credential.helper store
 
+          git config --global credential.helper store
+  - 7z a coverage.zip coverage/**
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_ACCESS_TOKEN):x-oauth-basic@github.com`n"
+  - cmd: >-
           mkdir gh-pages
 
           cd gh-pages
@@ -83,5 +84,5 @@ on_success:
 
           git commit -am "Update coverage code repost"
 
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_ACCESS_TOKEN):x-oauth-basic@github.com`n"
+  
   - git push origin gh-pages
