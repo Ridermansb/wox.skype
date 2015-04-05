@@ -69,12 +69,16 @@ on_success:
   - git config --global credential.helper store
   - git config --global user.email "appveyor@bindsolution.com"
   - git config --global user.name "AppVeyor"
-  - 7z a coverage.zip coverage/**
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_ACCESS_TOKEN):x-oauth-basic@github.com/Ridermansb/wox.skype.git"
-  - mkdir gh-pages
-  - cd gh-pages
-  - git clone -b gh-pages https://github.com/Ridermansb/wox.skype.git .
-  - 7z e ..\..\coverage.zip -o coverage -y
-  - git add .
-  - git commit -am "Update coverage code report"
-  - git push origin gh-pages
+  - cmd: >- 
+          mkdir gh-pages & cd gh-pages
+
+          git clone -b gh-pages https://github.com/Ridermansb/wox.skype.git .
+  - ps: Move-Item coverage\* gh-pages\coverage -Force
+  - cmd: >- 
+          git add .
+
+          git commit -am "Update coverage code report"
+
+          git push origin gh-pages
+
