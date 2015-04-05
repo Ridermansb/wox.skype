@@ -28,7 +28,6 @@ cache:
 branches:
   only:
     - master
-    - develop
 
 before_build:
   - regsvr32 /s Skype4COM.dll
