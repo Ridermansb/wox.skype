@@ -6,6 +6,7 @@
 [![Code Coverage](https://img.shields.io/badge/coverage-code-brightgreen.svg)](http://bit.ly/1CqbWue)
 [![Build status](https://ci.appveyor.com/api/projects/status/rked7hgthjkkq0no/branch/develop?svg=true)](https://ci.appveyor.com/project/Ridermansb/wox-skype/branch/develop)
 [![Join the chat at https://gitter.im/Ridermansb/wox.skype](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Ridermansb/wox.skype?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Stories in Ready](https://badge.waffle.io/Ridermansb/wox.skype.png?label=ready&title=Ready)](http://waffle.io/Ridermansb/wox.skype)
 
 ### Features
 
