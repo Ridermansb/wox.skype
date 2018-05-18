@@ -1,4 +1,7 @@
 
+**This help you in some way?** [Buy me a cofffe][coffee]  :)   
+https://buymeacoff.ee/ridermansb
+
 # Wox.Skype
 
 [![Pay me a coffee](http://img.shields.io/gratipay/ridermansb.svg)](http://bit.ly/1MTgIvN)
@@ -32,3 +35,5 @@ You can choose any of the two options to install:
 Support this project and others by [ridermansb](https://gratipay.com/ridermansb/) via [gratipay](https://gratipay.com/ridermansb/).
 
 [![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/ridermansb/)
+
+[coffee]: https://buymeacoff.ee/ridermansb
